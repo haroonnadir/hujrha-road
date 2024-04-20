@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            // Perform form validation and submission logic here
+        });
+    
+        document.getElementById("username").addEventListener("input", function(event) {
+            console.log("Username changed:", event.target.value);
+        });
+    
+        document.getElementById("password").addEventListener("keydown", function(event) {
+            console.log("Key pressed:", event.key);
+        });
+        function myFunction() {
+            console.log('Hello World!');
+        }
+        // Call myFunction every 1 second (1000 milliseconds)
+        var intervalID = setInterval(myFunction, 1000);
+        clearInterval(intervalID);
+        function myFunction() {
+            console.log('Hello World!');
+        }
+        // Call myFunction after 3 seconds (3000 milliseconds)
+        var timeoutID = setTimeout(myFunction, 3000);
+        clearTimeout(timeoutID);
+    </script>
+    <form onsubmit="validateForm()">
+        <input type="text">
+        <button type="submit">Submit</button>
+    </form>
+<input type="text" onselect="copySelectedText()">
+
+<input type="search" onsearch="performSearch()">
+<form onreset="clearForm()">
+    <input type="text">
+    <button type="reset">Reset</button>
+</form>
+
+<input type="email" required oninvalid="showValidationError()">
+<input type="text" oninput="liveSearch()">
+<input type="text" onfocus="highlightInput()">
+
+<div oncontextmenu="showContextMenu()">Right-click me</div>
+
+<select onchange="updateSelection()">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+</select>
+
+<input type="text" onblur="validateInput()">
+</body>
+</html>
